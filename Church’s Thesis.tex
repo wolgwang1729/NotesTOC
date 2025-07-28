@@ -1,0 +1,125 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{automata, positioning, arrows}
+\usepackage{amsthm}
+
+\tikzset{
+->, % makes the edges directed
+>=stealth, % makes the arrow heads bold
+node distance=3cm, % specifies the minimum distance between two nodes. Change if necessary.
+every state/.style={thick, fill=gray!10}, % sets the properties for each ’state’ node
+initial text=$ $, % sets the text that appears on the start arrow
+}
+\tikzset{
+  mydotted/.style={dotted, line width=1pt}
+}
+
+\title{ \large Theory of Computation \\ \LARGE   Church's Thesis}
+\author{Mayank Yadav}
+\date{April 10, 2025}
+
+\begin{document}
+\maketitle
+
+
+\section{Introduction}
+Church's thesis is one of the main hypotheses that laid the foundation of computation. It is also known as Turing's thesis, Church-Turing thesis.
+There are various ways to state this thesis.
+\begin{itemize}
+    \item A function can be effectively computed (i.e computation consists of a finite number of steps, there are fixed rules for moving from one step to the next and it always outputs the correct answer) if and only if it is computable by a Turing machine.
+
+    \item Every real world computation can be effectively calculated by a Turing machine.
+
+    \item Any effective computational method is at most as powerful as a Turing machine.
+
+\end{itemize}
+It should be noted that Church's thesis is not a theorem but a falsiable scientific hypothesis. It cannot be proven or disproven because of the informal definition of the term "effectively computable".
+
+\section{Historical Background}
+
+\begin{itemize}
+  \item In 1933, Kurt Gödel gave the formal definition of general recursive functions which are partial functions $f: \mathbb{N} \to \mathbb{N}$ that are computable.
+
+  \item In 1936, Alonzo Church and his student Kleene worked on lambda calculus which is a formal system for representing computation and it consists of variables, lambda abstraction and application. For example, $f(x)=x^2+5x+1$ can be represented as ($\lambda x.(x^2+5x+1)$). They proved that the set of all computable functions is the same as the set of all general recursive functions.
+
+  \item In 1936, Alan turing put forward the concept of a-machines(now known as Turing machines) which are abstract machines that can simulate any algorithm. He also sketched a proof of equivalence of functions defined by lambda and Turing machines.
+\end{itemize}
+  The terms "Church's thesis" and "Turing's thesis" finally came in the book "Introduction to Metamathematics" by Stephen Cole Kleene in 1952. 
+
+  He stated the Church's thesis as:
+  \begin{quote}
+    "Every effectively calculable function (effectively decidable predicate) is general recursive."
+  \end{quote}
+
+  and Turing's thesis as:
+  \begin{quote}
+    "Every function which would naturally be regarded as computable is computable under his definition, i.e. by one of his machines."
+  \end{quote}
+
+  And the culmination of these two thesis is the Church-Turing thesis.
+
+\section{Implications and Applications}
+The Church-Turing thesis has various implications for computer science and mathematics:
+
+\begin{itemize}
+  \item \textbf{Universality}: It establishes that a single, simple model of computation (the Turing machine) can compute anything that can be computed by any algorithm.
+  
+  \item \textbf{Unsolvable problems}: It provides a method for proving the existence of algorithmically unsolvable problems, such as the Halting Problem.
+  
+  \item \textbf{Computational complexity}: It forms the foundation for complexity theory, which studies the time required in solving various computer problems.
+  
+  \item \textbf{Programming languages}: All modern programming languages are Turing-complete, meaning they can express any algorithm a Turing machine can compute.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{sipser}
+Michael Sipser,
+\textit{Introduction to the Theory of Computation},
+Cengage Learning, 2012.
+
+\bibitem{enwiki:1264121825}
+Wikipedia contributors,
+\textit{Church–Turing thesis --- Wikipedia, The Free Encyclopedia},
+2025,
+\url{https://en.wikipedia.org/wiki/Church-Turing_thesis},
+
+\bibitem{stanford-cs103}
+Stanford University,
+\textit{CS103: Mathematical Foundations of Computing},
+Stanford University, Department of Computer Science,
+\url{https://cs103.stanford.edu/},
+
+\bibitem{kleene}
+Stephen Cole Kleene,
+\textit{Introduction to Metamathematics},
+North-Holland Publishing Company, 1952.
+
+\bibitem{geeksforgeeks}
+GeeksforGeeks,
+\textit{Church's Thesis for Turing Machine},
+2023,
+\url{https://www.geeksforgeeks.org/churchs-thesis-for-turing-machine/}.
+
+
+\end{thebibliography}
+
+\end{document}
+
